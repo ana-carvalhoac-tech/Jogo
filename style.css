@@ -1,0 +1,257 @@
+
+:root {
+    --fundo: #ffc6ec;
+    --painel: #030922;
+    --painel-claro: #242c46;
+    --texto: #f4f5ff;
+    --texto-suave: #c5cff0;
+    --destaque: #ffc3fafb;
+    --verde: #54d6a0;
+    --vermelho: #ff7185;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 36px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    background:
+        radial-gradient(circle at 15% 15%, #332b65, transparent 32%),
+        var(--fundo);
+}
+
+.container {
+    width: 100%;
+    max-width: 590px;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.etiqueta {
+    color: var(--texto-suave);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 12px 0;
+    font-size: 3.5rem;
+}
+
+h1 span {
+    color: var(--destaque);
+}
+
+.cabecalho p {
+    color: var(--texto-suave);
+}
+
+.painel {
+    padding: 28px;
+    border-radius: 22px;
+    background: var(--painel);
+    border: 1px solid #ffffff15;
+    box-shadow: 0 22px 65px #0005;
+}
+
+.topo-painel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rotulo {
+    color: var(--texto-suave);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.tentativas-box {
+    text-align: right;
+}
+
+.contador {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.dica-box {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+    padding: 14px;
+    border-radius: 13px;
+    background: #9b8cff15;
+    color: #d9d5ff;
+}
+
+.dica-box p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.dica-box strong {
+    color: var(--destaque);
+}
+
+.palavra-area {
+    padding: 24px 10px;
+    text-align: center;
+    border-top: 1px solid #ffffff15;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.palavra {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 7px;
+    overflow-wrap: anywhere;
+}
+
+.entrada {
+    margin-top: 24px;
+}
+
+.entrada label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--texto-suave);
+}
+
+.entrada-linha {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    width: 75px;
+    padding: 13px;
+    border: 1px solid #ffffff20;
+    border-radius: 11px;
+    background: var(--painel-claro);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button {
+    border: 0;
+    border-radius: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#btn-tentar {
+    flex: 1;
+    padding: 13px;
+    background: var(--destaque);
+    color: #17142b;
+}
+
+.mensagem {
+    min-height: 24px;
+    margin: 17px 0;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+.acerto {
+    color: var(--verde);
+}
+
+.erro {
+    color: var(--vermelho);
+}
+
+.final {
+    color: var(--destaque);
+    font-weight: bold;
+}
+
+.letras-area {
+    padding-top: 17px;
+    border-top: 1px solid #ffffff15;
+}
+
+#letras-usadas {
+    color: var(--texto-suave);
+}
+
+.botao-secundario {
+    width: 100%;
+    margin-top: 23px;
+    padding: 13px;
+    background: transparent;
+    border: 1px solid #ffffff25;
+    color: white;
+}
+
+.botao-secundario:hover {
+    background: #ffffff10;
+}
+
+.estatisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 17px;
+}
+
+.estatisticas div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    border-radius: 13px;
+    background: var(--painel);
+    text-align: center;
+}
+
+.estatisticas strong {
+    font-size: 1.35rem;
+}
+
+.estatisticas span {
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+}
+
+footer {
+    margin-top: 22px;
+    color: var(--texto-suave);
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .painel {
+        padding: 20px 16px;
+    }
+
+    .palavra {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+    }
+}

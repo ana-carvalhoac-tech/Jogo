@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo de adivinhação de palavras desenvolvido com HTML, CSS e JavaScript.">
+  <title>Adivinhe! | Jogo de palavras</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="cabecalho">
+      <span class="etiqueta">DESAFIO DE PALAVRAS</span>
+      <h1>Adivinhe<span>!</span></h1>
+      <p>Descubra a palavra secreta antes que suas tentativas acabem.</p>
+    </header>
+
+    <section class="painel" aria-labelledby="titulo-jogo">
+      <div class="topo-painel">
+        <div>
+          <p class="rotulo">CATEGORIA</p>
+          <h2 id="categoria">Tecnologia</h2>
+        </div>
+        <div class="tentativas-box">
+          <p class="rotulo">TENTATIVAS</p>
+          <p class="contador"><span id="tentativas">6</span><span class="total">/ 6</span></p>
+        </div>
+      </div>
+
+      <div class="dica-box">
+        <span aria-hidden="true">💡</span>
+        <p><strong>Dica:</strong> <span id="dica">A dica aparecerá aqui.</span></p>
+      </div>
+
+      <div class="palavra-area">
+        <p class="rotulo">PALAVRA SECRETA</p>
+        <p id="palavra" class="palavra" aria-live="polite">_ _ _ _ _</p>
+      </div>
+
+      <form id="form-letra" class="entrada">
+        <label for="letra">Digite uma letra</label>
+        <div class="entrada-linha">
+          <input id="letra" name="letra" type="text" maxlength="1"
+                 pattern="[A-Za-zÀ-ÿ]" autocomplete="off"
+                 placeholder="A" aria-label="Digite uma letra" required>
+          <button id="btn-tentar" type="submit">Tentar</button>
+        </div>
+      </form>
+
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite">Boa sorte! Escolha uma letra.</p>
+
+      <div class="letras-area">
+        <p class="rotulo">LETRAS UTILIZADAS</p>
+        <p id="letras-usadas" class="letras-usadas">Nenhuma letra utilizada.</p>
+      </div>
+
+      <button id="btn-reiniciar" class="botao-secundario" type="button">↻ Nova partida</button>
+    </section>
+
+    <section class="estatisticas" aria-label="Estatísticas da partida">
+      <div><strong id="partidas">0</strong><span>Partidas</span></div>
+      <div><strong id="vitorias">0</strong><span>Vitórias</span></div>
+      <div><strong id="derrotas">0</strong><span>Derrotas</span></div>
+    </section>
+
+    <footer>
+      <p>Desenvolvido com HTML, CSS e JavaScript · Web I</p>
+    </footer>
+  </main>
+</body>
+</html>
